@@ -42,6 +42,7 @@ public class WeatherGenerator {
         StringWriter writer = new StringWriter();
         try{
             writer = generator.createWeather();
+            System.out.println("new commit");
         }catch(IOException e){
             e.printStackTrace();
         }
