@@ -8,7 +8,7 @@ import java.util.Map;
 public class WeatherGenerator {
     public StringWriter createWeather() throws IOException{
         WeatherParser parser = new WeatherParser();
-        Map<String,Map<String,Integer>> map = parser.getData();
+        Map<String,Map<String,Integer>> map = parser.getData("src/main/resources/j.json");
         DateCreator creator = new DateCreator();
         Date date = creator.createRandomDate(map);
         String month = stringMonth(date.getMonth());
@@ -42,8 +42,6 @@ public class WeatherGenerator {
         StringWriter writer = new StringWriter();
         try{
             writer = generator.createWeather();
-            System.out.println("new commit");
-            System.out.println("next commit");
         }catch(IOException e){
             e.printStackTrace();
         }
