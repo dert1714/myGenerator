@@ -6,5 +6,15 @@
   "May" : {
     "temperature_min" : 0,
     "temperature_max" : 30
+  },
+  "Date" : {
+    "year_min" : 2015,
+    "year_max" : 2018,
+    "month_min" : 0,
+    "month_max" : 11,
+    "day_min" : 0,
+    "day_max" : 31,
+    "hour_min" : 0,
+    "hour_max" : 23
   }
 }
