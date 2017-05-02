@@ -43,6 +43,7 @@ public class WeatherGenerator {
         try{
             writer = generator.createWeather();
             System.out.println("new commit");
+            System.out.println("next commit");
         }catch(IOException e){
             e.printStackTrace();
         }
