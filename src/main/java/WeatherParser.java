@@ -10,8 +10,9 @@ import java.util.Map;
  * Created by valera on 15.04.2017.
  */
 public class WeatherParser {
-    Map<String,Map<String,Integer>> getData() throws IOException{
-        JsonParser parser = Json.createParser(new FileReader("src/main/resources/j.json"));
+    Map<String,Map<String,Integer>> getData(String jsonPath) throws IOException{
+//        JsonParser parser = Json.createParser(new FileReader("src/main/resources/j.json"));
+        JsonParser parser = Json.createParser(new FileReader(jsonPath));
         int tmp = 0;
         Map<String,Integer> m = new HashMap<>();
         Map<String,Map<String,Integer>> map = new HashMap<>();
