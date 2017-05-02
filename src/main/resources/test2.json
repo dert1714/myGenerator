@@ -1,0 +1,10 @@
+{
+  "April" : {
+    "temperature_min" : 0,
+    "temperature_max" : 30
+  },
+  "May" : {
+    "temperature_min" : 0,
+    "temperature_max" : 30
+  }
+}
