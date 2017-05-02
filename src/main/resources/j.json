@@ -1,0 +1,32 @@
+{
+  "June" : {
+    "temperature_min" : 0,
+    "temperature_max" : 30,
+    "pressure_min" : 700,
+    "pressure_max" : 800,
+    "damp_min" : 0,
+    "damp_max" : 100,
+    "speed_wind_min" : 0,
+    "speed_wind_max" : 100
+  },
+  "January" : {
+    "temperature_min" : 0,
+    "temperature_max" : 30,
+    "pressure_min" : 700,
+    "pressure_max" : 800,
+    "damp_min" : 0,
+    "damp_max" : 100,
+    "speed_wind_min" : 0,
+    "speed_wind_max" : 100
+  },
+  "Date" : {
+    "year_min" : 2015,
+    "year_max" : 2018,
+    "month_min" : 0,
+    "month_max" : 11,
+    "day_min" : 0,
+    "day_max" : 31,
+    "hour_min" : 0,
+    "hour_max" : 23
+  }
+}
