@@ -1,5 +1,9 @@
 //package main.java;
 
+import javax.ws.rs.client.*;
+//import javax.ws.rs.client.Client;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import java.io.IOException;
 import java.io.StringWriter;
 import java.util.Date;
@@ -37,16 +41,18 @@ public class WeatherGenerator {
             default : return "";
         }
     }
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Throwable {
         WeatherGenerator generator = new WeatherGenerator();
-        StringWriter writer = new StringWriter();
-        try{
-            writer = generator.createWeather();
-        }catch(IOException e){
-            e.printStackTrace();
-        }
-        finally{
-            System.out.println(writer);
-        }
+        StringWriter writer;
+
+        writer = generator.createWeather();
+        Client client = ClientBuilder.newClient();
+        WebTarget target = client.target("http://localhost:8080/greeting");
+        Invocation invocation = target.request().buildPost(Entity.entity(writer, MediaType.TEXT_PLAIN));
+        Response response = invocation.invoke();
+        String body = response.readEntity(String.class);
+        System.out.println(body);
+        response.close();
+
     }
 }
