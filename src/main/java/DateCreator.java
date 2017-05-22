@@ -17,6 +17,18 @@ public class DateCreator {
         return new Date(year,month,day,hour,0);
     }
 
+    public long[] createMonthDate(int month) {
+        Date d = new Date(117,month,1,10,0);
+        long timestamp = d.getTime();
+        long res[] = new long[31];
+        res[0] = timestamp;
+        for(int i = 1; i < 31; i++) {
+            timestamp += 86400000;
+            res[i] = timestamp;
+        }
+        return res;
+    }
+
     static int createProperty(int min, int max){
         if(min > max)
             throw new IllegalArgumentException("logic mistake in config file");
@@ -50,5 +62,16 @@ public class DateCreator {
             return day_max;
         else
             return maxLegal;
+    }
+
+    public static void main(String[] args) {
+//        DateCreator dc = new DateCreator();
+        Date dc = new Date(117, 4,22,3,45,0);
+        System.out.println(dc);
+        System.out.println(dc.getTime());
+//        1495435497421
+//        long[] r = dc.createMonthDate(4);
+//        for(long l : r)
+//            System.out.println(l);
     }
 }

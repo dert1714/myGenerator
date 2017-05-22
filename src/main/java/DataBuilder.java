@@ -9,7 +9,7 @@ import java.util.Random;
  * Created by valera on 16.04.2017.
  */
 public class DataBuilder {
-    static Random random = new Random(47);
+    Random random = new Random(47);
     static int faultsCount = 0;
     public DataBuilder(){
         faultsCount = 0;
